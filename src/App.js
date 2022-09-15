@@ -1,10 +1,15 @@
-import './App.css';
+import "./App.css";
+import About from "./components/About";
 
 function App() {
   return (
-    <div>
-     
-    </div>
+    <body>
+      <header>Header</header>
+      <main>
+        <About></About>
+      </main>
+      <footer>footer</footer>
+    </body>
   );
 }
 
