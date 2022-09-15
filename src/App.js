@@ -1,16 +1,20 @@
 import "./App.css";
+import Nav from "./components/Nav";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import Resume from "./components/Resume";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+export default function App() {
   return (
-    <body>
-      <header>Header</header>
+    <div>
+      <Nav></Nav>
       <main>
         <About></About>
+        <Portfolio></Portfolio>
+        <Resume></Resume>
       </main>
       <footer>footer</footer>
-    </body>
+    </div>
   );
 }
-
-export default App;

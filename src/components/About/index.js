@@ -1,7 +1,7 @@
 import React from 'react';
 import portrait from "../../assets/img/portrait.jpg";
 
-function About() {
+export default function About() {
     return (
       <section>
         <h1 id="about">About Me</h1>
@@ -15,6 +15,4 @@ function About() {
         <img src={ portrait } style ={{ width: "50" }} alt="portrait" />
       </section>
     );
-  }
-  
-  export default About;
+  };
