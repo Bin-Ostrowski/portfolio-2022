@@ -90,3 +90,10 @@ li {
 .flex-end {
   justify-content: flex-end;
 }
+
+footer a {
+  padding: 0 10px
+}
+
+
+/* https://docs.google.com/document/d/1iPiRafu1Z3uSMhNU1xseaHzr04oZmamBtP4Fzg3LBqs/edit?usp=sharing */

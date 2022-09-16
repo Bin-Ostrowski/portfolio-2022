@@ -2,7 +2,7 @@ import Nav from "./components/Nav";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
         <Portfolio></Portfolio>
         <Resume></Resume>
       </main>
-      <footer>footer</footer>
+      <Footer></Footer>
     </div>
   );
 }
