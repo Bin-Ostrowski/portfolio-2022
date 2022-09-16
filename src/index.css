@@ -70,7 +70,23 @@ nav a:hover {
 h1 {
   margin: 10px;
 }
+
+ul {
+  list-style-type: none; 
+}
+
+li {
+  padding: 20px 10px;
+}
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.flex-end {
+  justify-content: flex-end;
 }
