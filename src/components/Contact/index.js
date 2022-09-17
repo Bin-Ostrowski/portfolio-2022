@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { validateEmail } from "../../utils/helpers";
 
 export default function ContactForm() {
-
-  //initate formState to be empty strings
+  //declare formState to be empty strings
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -12,12 +12,35 @@ export default function ContactForm() {
   //deconstruct formState
   const { name, email, message } = formState;
 
+  //declare error message for validator to an empty string
+  const [errorMessage, setErrorMessage] = useState("");
+
   //form input handler
   function handleChange(e) {
+    //validate email, name and message
+    if (e.target.name === "email") {
+      const isValid = validateEmail(e.target.value);
+      console.log(isValid);
+
+      //isvalid conditional statement
+      if (!isValid) {
+        setErrorMessage("Please enter a valid email.");
+      } else {
+        if (!e.target.value.length) {
+          setErrorMessage(`${e.target.name} is required.`);
+        } else {
+          setErrorMessage("");
+        }
+      }
+    }
+
+    //conditional statment for error message
     //update setFormState
     //make property name dynamic variable determined by form element.
     //from input value
-    setFormState({ ...formState, [e.target.name]: e.target.value });
+    if (!errorMessage) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+    }
   }
 
   //submit form handler
@@ -35,7 +58,7 @@ export default function ContactForm() {
           <input
             type="text"
             defaultValue={name}
-            onChange={handleChange}
+            onBlur={handleChange}
             name="name"
           />
         </div>
@@ -44,7 +67,7 @@ export default function ContactForm() {
           <input
             type="email"
             defaultValue={email}
-            onChange={handleChange}
+            onBlur={handleChange}
             name="email"
           />
         </div>
@@ -53,9 +76,15 @@ export default function ContactForm() {
           <textarea
             name="message"
             defaultValue={message}
-            onChange={handleChange}
+            onBlur={handleChange}
             rows="5"
           />
+          {/* conditional render error message (short circuit for if statment) */}
+          {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+          )}
           <button type="submit">Send</button>
         </div>
       </form>
