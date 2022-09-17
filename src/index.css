@@ -101,4 +101,14 @@ footer a {
 .href-links:hover {
   color: var(--tertiary);
   text-decoration: none;
+  cursor: pointer;
+}
+
+.navActive {
+  color: var(--tertiary);
+  text-decoration: none;
+}
+
+.navActive {
+  cursor: pointer;
 }
