@@ -11,7 +11,6 @@ export default function Nav() {
         </h1>
         <nav>
             <ul className="flex-row">
-            
                 <li className="flex-row">
                     <a className="href-links" href="#about">About Me</a>
                 </li>

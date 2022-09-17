@@ -8,12 +8,18 @@ main {
   margin: 0 auto;
 	max-width: 95%;
   /* padding: 50px 30px; */
+  /* background-image: url("./assets/img/flowers.jpg");
+  background-size: 100%; */
 }
 :root {
-  --primary: rgb(1, 69, 80);
-  --secondary: rgb(65, 153, 174);
-  --tertiary: rgb(248, 165, 29);
-  --light: rgb(205, 134, 94);
+  --primary: rgb(44, 44, 44, 0.6);
+  /* rgb(1, 69, 80); */
+  --secondary: rgb(154, 96, 96);
+  /* rgb(65, 153, 174); */
+  --tertiary: #FFA13C;
+  /* rgb(248, 165, 29); */
+  --light: rgb(255, 189, 145);
+  /* rgb(205, 134, 94); */
   --black: rgb(14, 14, 14);
   --purple: rgb(71, 48, 65);
   --error: rgb(228, 46, 1);
@@ -38,12 +44,18 @@ body {
   letter-spacing: .1em;
   background: var(--primary);
   color: var(--light);
-  /* font-family: 'Poiret One', cursive; */
+  background-image: url("./assets/img/flowers.jpg");
+  background-size: 100%;
 
 }
 
 header {
-  background: var(--purple)
+  padding: 0 0 0 100px;
+  background-color: var(--primary);
+}
+
+section {
+  background-color: var(--primary);
 }
 
 h1 {
@@ -68,6 +80,10 @@ li {
 
 .flex-end {
   justify-content: flex-end;
+}
+
+footer {
+  background: var( --tertiary)
 }
 
 footer a {
