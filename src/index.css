@@ -42,29 +42,8 @@ body {
 
 }
 
-a {
-  color: var(--tertiary);
-  text-decoration: none;
-  /* font-weight: bold; */
-}
-
-a:hover {
-  border-radius: 2px;
-  border-color: var(--light);
-}
-
 header {
   background: var(--purple)
-}
-
-header a {
-  color: var(--light);
-}
-
-nav a:hover {
-  text-decoration: none;
-  border-radius: 2px;
-  border-color: var(--light);
 }
 
 h1 {
@@ -95,5 +74,12 @@ footer a {
   padding: 0 10px
 }
 
+.href-links {
+  color: var(--light);
+  text-decoration: none;
+}
 
-/* https://docs.google.com/document/d/1iPiRafu1Z3uSMhNU1xseaHzr04oZmamBtP4Fzg3LBqs/edit?usp=sharing */
+.href-links:hover {
+  color: var(--tertiary);
+  text-decoration: none;
+}

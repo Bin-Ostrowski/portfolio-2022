@@ -7,22 +7,22 @@ export default function Nav() {
     return (
       <header className="flex-row">
         <h1>
-            <a href='/'>Robin Ostrowski</a>
+            <a className="href-links" href='/'>Robin Ostrowski</a>
         </h1>
         <nav>
             <ul className="flex-row">
             
                 <li className="flex-row">
-                    <a href="#about">About Me</a>
+                    <a className="href-links" href="#about">About Me</a>
                 </li>
                 <li>
-                    <a href="#portfolio">Portfolio</a>
+                    <a className="href-links" href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                    <a href="#resume">Resume</a>
+                    <a className="href-links" href="#resume">Resume</a>
                 </li>
                 <li>
-                    <span>Contact</span>
+                    <span className="href-links">Contact</span>
                 </li>
             </ul>
         </nav>
