@@ -1,27 +1,28 @@
 import React, {useState} from "react";
 import linkedIn from "../../assets/img/linkedIn.png";
-import GitHub from "../../assets/img/GitHub-Dark.png";
+import gitHub from "../../assets/img/GitHub-Dark.png";
 import stackOverflow from "../../assets/img/stackoverflow.png";
 
 export default function Nav() {
 const icons = [
     {
         href: "https://linkedin.com/in/robinostrowski",
-        src: linkedIn,
+        img: linkedIn,
         alt: "linkedIn Icon"
     },
     {
         href: "https://github.com/Bin-Ostrowski",
-        src: GitHub,
+        img: gitHub,
         alt: "GitHub Icon"
     },
     {
         href: "https://stackoverflow.com/users/20006902/bin-ostrowski",
-        src: stackOverflow,
+        img: stackOverflow,
         alt: "stack overflow Icon"
     },
 ]
 
+//declare icon state
 const [currentIcon, setIcon] = useState(icons);
 
   return (
@@ -35,7 +36,7 @@ const [currentIcon, setIcon] = useState(icons);
         rel="noreferrer noopener"
         className="flex-wrap"
       >
-        <img src={icons.src} style={{ width: "30" }} alt={icons.alt} />
+        <img src={icons.img} style={{ width: "30" }} alt={icons.alt} />
       </a>
       
         ))}
