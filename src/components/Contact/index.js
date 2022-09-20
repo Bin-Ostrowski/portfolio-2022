@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
+import "./contact.css";
 
 export default function ContactForm() {
   //declare formState to be empty strings
@@ -20,17 +21,18 @@ export default function ContactForm() {
     //validate email, name and message
     if (e.target.name === "email") {
       const isValid = validateEmail(e.target.value);
-      console.log(isValid);
 
       //isvalid conditional statement
       if (!isValid) {
         setErrorMessage("Please enter a valid email.");
       } else {
-        if (!e.target.value.length) {
-          setErrorMessage(`${e.target.name} is required.`);
-        } else {
-          setErrorMessage("");
-        }
+        setErrorMessage("");
+      }
+    } else {
+      if (!e.target.value.length) {
+        setErrorMessage(`${e.target.name} is required`);
+      } else {
+        setErrorMessage("");
       }
     }
 
@@ -52,13 +54,19 @@ export default function ContactForm() {
   return (
     <section>
       <h1>Contact Me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
+      <form
+        action="https://formsubmit.co/bin.ostrowski@gmail.com"
+        method="POST"
+        // id="contact-form"
+        // onSubmit={handleSubmit}
+        target="_blank"
+      >
         <div>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
             defaultValue={name}
-            onBlur={handleChange}
+            onChange={handleChange}
             name="name"
           />
         </div>
@@ -67,8 +75,9 @@ export default function ContactForm() {
           <input
             type="email"
             defaultValue={email}
-            onBlur={handleChange}
+            onChange={handleChange}
             name="email"
+            required
           />
         </div>
         <div>
@@ -76,8 +85,10 @@ export default function ContactForm() {
           <textarea
             name="message"
             defaultValue={message}
-            onBlur={handleChange}
+            onChange={handleChange}
             rows="5"
+            type="message"
+            required
           />
           {/* conditional render error message (short circuit for if statment) */}
           {errorMessage && (
@@ -85,7 +96,9 @@ export default function ContactForm() {
               <p className="error-text">{errorMessage}</p>
             </div>
           )}
-          <button type="submit">Send</button>
+          <button type="submit" className="btn btn-lg">
+            Send
+          </button>
         </div>
       </form>
     </section>
