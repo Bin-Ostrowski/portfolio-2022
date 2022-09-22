@@ -40,6 +40,7 @@ const [currentIcon, setIcon] = useState(icons);
       </a>
       
         ))}
+        <div className="container">&copy;2020 by Robin Ostrowski</div>
     </footer>
   );
 }
