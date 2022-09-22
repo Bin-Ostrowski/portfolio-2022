@@ -68,7 +68,7 @@ export default function ContactForm() {
               target="_blank"
               className="form"
             >
-              <Form.Group className="mb-3" >
+              <Form.Group className="mb-3">
                 <Form.Label htmlFor="name">Name:</Form.Label>
                 <Form.Control
                   placeholder="Enter Name"
@@ -78,7 +78,7 @@ export default function ContactForm() {
                   name="name"
                 />
               </Form.Group>
-              <Form.Group className="mb-3" >
+              <Form.Group className="mb-3">
                 <Form.Label htmlFor="email">Email address:</Form.Label>
                 <Form.Control
                   type="email"

@@ -70,62 +70,49 @@ export default function Project() {
   // declare project state
   const [currentProject, setProject] = useState(projects);
 
-  // function handleFocus(projects) {
-  //   return (
-  //     <Card>
-  //       <p>{projects.tools}</p>
-  //     </Card>
-  //   )
-  // }
-
   return (
     <Container className="flex-row">
       {currentProject.map((projects, i) => (
-        // <Stack direction="horizontal" gap={3}  key={i}>
-          <Card className="project-cards "
-            style={{ width: "23rem" }} key={i}
-
-            // onFocus={handleFocus}
-          >
-            <Card.Img
-              variant="top"
-              className="project-img"
-              src={projects.image}
-              // style={{ object-fit: "cover" }}
-              //styling not working
-            />
-            <Card.Body className={"card-background"}>
-              <Card.Title>{projects.name}</Card.Title>
-              <Row>
-                <Button type="submit" variant="light">
-                  <a
-                    className="deploy-btn"
-                    href={projects.deploy}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Deploy Project
-                  </a>
-                </Button>
-              </Row>
-              <Row className="project-github-btn">
-                <Button type="submit" variant="light">
-                  <a
-                    href={projects.github}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    <img
-                      src={gitHubIcon}
-                      // style={{ width: "30" }}
-                      alt="github icon"
-                    />
-                  </a>
-                </Button>
-              </Row>
-            </Card.Body>
-          </Card>
-        // </Stack>
+        <Card
+          className="project-cards "
+          style={{ width: "23rem" }}
+          key={i}
+        >
+          <Card.Img
+            variant="top"
+            className="project-img"
+            src={projects.image}
+          />
+          <Card.Body className={"card-background"}>
+            <Card.Title>{projects.name}</Card.Title>
+            <Row>
+              <Button type="submit" variant="light">
+                <a
+                  className="deploy-btn"
+                  href={projects.deploy}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Deploy Project
+                </a>
+              </Button>
+            </Row>
+            <Row className="project-github-btn">
+              <Button type="submit" variant="light">
+                <a
+                  href={projects.github}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img
+                    src={gitHubIcon}
+                    alt="github icon"
+                  />
+                </a>
+              </Button>
+            </Row>
+          </Card.Body>
+        </Card>
       ))}
     </Container>
   );
