@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import About from "../../components/About";
 
 export default function Nav(props) {
   //import props
@@ -12,11 +13,7 @@ export default function Nav(props) {
   return (
     //return header and navigation
     <header className="flex-row">
-      <h1>
-        <a className="href-links" href="/">
-          Robin Ostrowski
-        </a>
-      </h1>
+      <h1>Robin Ostrowski</h1>
       <nav>
         <ul className="flex-row">
           {/* //map over pages to display links */}
