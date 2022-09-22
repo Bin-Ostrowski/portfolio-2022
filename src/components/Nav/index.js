@@ -12,7 +12,7 @@ export default function Nav(props) {
 
   return (
     //return header and navigation
-    <header className="flex-row">
+    <header className="flex-row ">
       <h1>Robin Ostrowski</h1>
       <nav>
         <ul className="flex-row">

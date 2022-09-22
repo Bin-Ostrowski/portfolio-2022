@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
-import "./contact.css";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+// import "./contact.css";
 
 export default function ContactForm() {
   //declare formState to be empty strings
@@ -54,53 +56,60 @@ export default function ContactForm() {
   return (
     <section>
       <h1>Contact Me</h1>
-      <form
+      <Form
         action="https://formsubmit.co/bin.ostrowski@gmail.com"
         method="POST"
-        // id="contact-form"
-        // onSubmit={handleSubmit}
         target="_blank"
       >
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
+        <Form.Group className="mb-3" controlId="formBasicName">
+          <Form.Label htmlFor="name">Name:</Form.Label>
+          <Form.Control
+            placeholder="Enter Name"
             type="text"
             defaultValue={name}
             onChange={handleChange}
             name="name"
           />
-        </div>
-        <div>
-          <label htmlFor="email">Email address:</label>
-          <input
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label htmlFor="email">Email address:</Form.Label>
+          <Form.Control
             type="email"
             defaultValue={email}
             onChange={handleChange}
             name="email"
             required
+            placeholder="Enter Email"
           />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicMessage">
+          <Form.Label htmlFor="message">Message:</Form.Label>
+          <Form.Control
             name="message"
             defaultValue={message}
             onChange={handleChange}
             rows="5"
             type="message"
+            placeholder="Enter Message"
             required
           />
-          {/* conditional render error message (short circuit for if statment) */}
-          {errorMessage && (
-            <div>
-              <p className="error-text">{errorMessage}</p>
-            </div>
-          )}
-          <button type="submit" className="btn btn-lg">
+        </Form.Group>
+
+        {/* conditional render error message (short circuit for if statment) */}
+        {errorMessage && (
+          <div>
+            <p className="error-text">{errorMessage}</p>
+          </div>
+        )}
+        <div className="d-grid gap-2">
+          <Button type="submit" variant="light">
             Send
-          </button>
+          </Button>
         </div>
-      </form>
+      </Form>
     </section>
   );
 }

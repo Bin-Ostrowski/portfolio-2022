@@ -7,26 +7,15 @@
 main {
   margin: 0 auto;
 	max-width: 95%;
-  /* padding: 50px 30px; */
-  /* background-image: url("./assets/img/flowers.jpg");
-  background-size: 100%; */
+
 }
 :root {
-  --primary: rgb(44, 44, 44, 0.6);
-  /* rgb(1, 69, 80); */
+  --primary: rgb(44, 44, 44);
   --secondary: rgb(154, 96, 96);
-  /* rgb(65, 153, 174); */
   --tertiary: #FFA13C;
-  /* rgb(248, 165, 29); */
   --light: rgb(255, 189, 145);
-  /* rgb(205, 134, 94); */
   --black: rgb(14, 14, 14);
-  --purple: rgb(71, 48, 65);
-  --error: rgb(228, 46, 1);
-  --spacing-one: calc(1rem * 0.5);
-  --spacing-two: calc(1rem);
-  --spacing-five: calc(2.5rem);
-  
+
 }
 
 html,
@@ -35,23 +24,45 @@ body {
 }
 
 body {
-  margin: 0;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 0;
+  /* padding: 0; */
   font-weight: 600;
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: .1em;
   background: var(--primary);
   color: var(--light);
-  background-image: url("./assets/img/flowers.jpg");
-  background-size: 100%;
-
+  /* background-image: url("./assets/img/flowers.jpg");  */
+  /* /* background-size: 100%; */
 }
 
 header {
-  padding: 0 0 0 100px;
+  background-color: var(--primary) ;
+  position: sticky;
+  top: 0;
+  /* background-image: url("./assets/img/flowers.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;  */
+  z-index: 9999; 
+  
+}
+
+.header-background {
   background-color: var(--primary);
+}
+
+.hero {
+  background-image: url("./assets/img/flowers.jpg");/*fill with image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  background-attachment: fixed;
+  background-position: 80%;
+  padding: 250px 20px 20px 20px;
 }
 
 section {
@@ -67,30 +78,31 @@ ul {
 }
 
 li {
-  padding: 20px 10px;
+  padding: 20px 10px 0 0;
 }
 .flex-row {
   display: flex;
   flex-wrap: wrap;
 }
 
-card img {
-  max-width: 50%;
-}
-.space-between {
+/* .space-between {
   justify-content: space-between;
 }
 
 .flex-end {
   justify-content: flex-end;
+} */
+section {
+  padding-bottom: 100px;
 }
 
 footer {
-  background: var( --tertiary)
+  background: var( --tertiary);
+  color: var(--primary)
 }
 
 footer a {
-  padding: 0 10px
+  padding: 0 10px;
 }
 
 .href-links {
@@ -104,6 +116,16 @@ footer a {
   cursor: pointer;
 }
 
+.deploy-btn {
+  color: var(--secondary);
+  text-decoration: none;
+}
+.deploy-btn:hover {
+  color: var(--secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .navActive {
   color: var(--tertiary);
   text-decoration: none;
@@ -111,4 +133,8 @@ footer a {
 
 .navActive {
   cursor: pointer;
+}
+
+.card-background {
+  background-color: var(--primary);
 }

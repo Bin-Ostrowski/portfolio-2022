@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Stack from "react-bootstrap/Stack";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import dose from "../../assets/img/dose.png";
 import rhythmInRegion from "../../assets/img/rhythm-in-region.jpeg";
 import gitHubIcon from "../../assets/img/GitHub-Dark.png";
@@ -70,20 +76,46 @@ export default function Project() {
   const [currentProject, setProject] = useState(projects);
 
   return (
-    <div id="cards" className="flex-row">
+    <Container id="cards" className="flex-row">
       {currentProject.map((projects, i) => (
-        <card id="project-card" key={i}>
-          <h2>{projects.name}</h2>
-          <img src={projects.image} alt={projects.alt} />
-          <p>Tools Used: {projects.tools}</p>
-          <a href={projects.deploy} target="_blank" rel="noreferrer noopener">
-            Deploy Project
-          </a>
-          <a href={projects.github} target="_blank" rel="noreferrer noopener">
-            <img src={gitHubIcon} style={{ width: "30" }} alt="github icon" />
-          </a>
-        </card>
+        <Stack gap={3}>
+          <Card style={{ width: "18rem" }} key={i}>
+            <Card.Img
+              variant="top"
+              src={projects.image}
+              style={{ width: "30", height: "20" }}
+            />
+            <Card.Body className={"card-background"}>
+              <Card.Title>{projects.name}</Card.Title>
+              {/* <Card.Text>
+        Tools Used: {projects.tools}
+        </Card.Text> */}
+              <Button type="submit" variant="light">
+                <a className="deploy-btn"
+                  href={projects.deploy}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Deploy Project
+                </a>
+              </Button>
+              <Button type="submit" variant="light">
+                <a
+                  href={projects.github}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img
+                    src={gitHubIcon}
+                    style={{ width: "30" }}
+                    alt="github icon"
+                  />
+                </a>
+              </Button>
+            </Card.Body>
+          </Card>
+        </Stack>
       ))}
-    </div>
+    </Container>
   );
 }

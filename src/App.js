@@ -8,11 +8,8 @@ import ContactForm from "./components/Contact";
 
 
 export default function App() {
-  //set state for conditional rendering selected page
-  // const [pageSelected, setPageSelected] = useState(false);
-  //finish from 20.4.6 Convert the App into an SPA
-
-
+  
+  // conditionally render main page from Nav bar
   const [pages] = useState([
     {
       name: 'About Me',
@@ -40,18 +37,10 @@ export default function App() {
       pages={pages}
       currentPage={currentPage}
       setCurrentPage={setCurrentPage}
-
-      //conditional rendering
-      //  pageSelected={pageSelected}
-      //  setPageSelected={setPageSelected}
       ></Nav>
+        <section className="hero"></section>
       <main>
-        {/* {!pageSelected && <About></About> } */}
       {currentPage.page}
-        {/* <ContactForm></ContactForm>
-        <About></About>
-        <Portfolio></Portfolio>
-        <Resume></Resume> */}
       </main>
       <Footer></Footer>
     </div>
