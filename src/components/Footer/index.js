@@ -54,7 +54,7 @@ export default function Nav() {
         </Row>
         <Row className="justify-content-md-center">
           <Col md="auto">
-            <div>&copy;2020 by Robin Ostrowski</div>
+            <div>&copy;2022 by Robin Ostrowski</div>
           </Col>
         </Row>
       </Container>
