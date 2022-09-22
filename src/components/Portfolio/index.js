@@ -1,12 +1,22 @@
 import React from "react";
 import Project from "../Project";
+import { Container, Row, Col } from "react-bootstrap";
 
-export default function Portfolio({currentProject}) {
-
+export default function Portfolio({ currentProject }) {
   return (
     <section>
-      <h1 id="portfolio">Portfolio</h1>
-      <Project currentProject={currentProject}></Project>
+      <Container>
+        <Row className="section-title">
+          <Col>
+            <h1 id="portfolio">Portfolio</h1>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="md">
+            <Project currentProject={currentProject}></Project>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 }

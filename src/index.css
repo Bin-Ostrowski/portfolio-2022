@@ -114,14 +114,35 @@ footer {
   cursor: pointer;
 }
 
+.form {
+  padding: 0 50px 0 20px;
+}
+
 .deploy-btn {
   color: var(--secondary);
   text-decoration: none;
-}
+} 
+
 .deploy-btn:hover {
   color: var(--secondary);
   text-decoration: none;
   cursor: pointer;
+} 
+
+.project-cards {
+  margin: 20px;
+  background-color: var(--light);
+}
+
+.project-img {
+  max-height: 200px;
+  object-fit: cover;
+  object-position: top;
+  top: 0;
+}
+
+.project-github-btn {
+  padding-top: 10px;
 }
 
 .navActive {
