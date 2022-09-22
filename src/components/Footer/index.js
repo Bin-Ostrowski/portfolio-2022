@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col } from "react-bootstrap";
 import linkedIn from "../../assets/img/linkedIn.png";
 import gitHub from "../../assets/img/GitHub-Dark.png";
 import stackOverflow from "../../assets/img/stackoverflow.png";
@@ -31,14 +29,14 @@ export default function Nav() {
   return (
     <footer>
       <Container>
-        <Row className="justify-content-md-center">
-          <Col md="auto">
+        <Row className="justify-content-sm-center">
+          <Col xs="auto">
             <h2>Let's connect!</h2>
           </Col>
         </Row>
 
-        <Row className="justify-content-md-center">
-          <Col md="auto">
+        <Row className="justify-content-sm-center">
+          <Col xs="auto">
             {currentIcon.map((icons, i) => (
               <a
                 href={icons.href}
@@ -52,32 +50,12 @@ export default function Nav() {
             ))}
           </Col>
         </Row>
-        <Row className="justify-content-md-center">
-          <Col md="auto">
+        <Row className="justify-content-sm-center">
+          <Col xs="auto">
             <div>&copy;2022 by Robin Ostrowski</div>
           </Col>
         </Row>
       </Container>
-      {/*           
-          className="justify-content-md-center">
-        <div className="justify-content-md-center">
-          <h2>Let's connect!</h2>
-          </div>
-          <div>
-        {currentIcon.map((icons, i) => (
-      <a
-        href={icons.href} key={i}
-        target="_blank"
-        rel="noreferrer noopener"
-        className="flex-wrap"
-      >
-        <img src={icons.img} style={{ width: "30" }} alt={icons.alt} />
-      </a>
-        ))}
-          </div>
-         
-        <div>&copy;2020 by Robin Ostrowski</div>
-        </Stack> */}
     </footer>
   );
 }

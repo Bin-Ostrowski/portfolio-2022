@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Stack from "react-bootstrap/Stack";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Button, Card, Stack } from "react-bootstrap";
 import dose from "../../assets/img/dose.png";
 import rhythmInRegion from "../../assets/img/rhythm-in-region.jpeg";
 import gitHubIcon from "../../assets/img/GitHub-Dark.png";
