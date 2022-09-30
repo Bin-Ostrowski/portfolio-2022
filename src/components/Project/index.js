@@ -14,8 +14,7 @@ export default function Project() {
     {
       name: "Google Books",
       deploy: "https://immense-citadel-75341.herokuapp.com/",
-      tools:
-        "MERN Apollo GraphQL",
+      tools: "MERN Apollo GraphQL",
       github: "https://github.com/Bin-Ostrowski/google-books",
       bio: "Refactored code to set up an Apollo Server to use GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.",
       image: googleBooks,
@@ -84,22 +83,16 @@ export default function Project() {
   return (
     <Container className="flex-row">
       {currentProject.map((projects, i) => (
-        <Card
-          className="project-cards "
-          style={{ width: "23rem" }}
-          key={i}
-        >
+        <Card className="project-cards " style={{ width: "23rem" }} key={i}>
           <Card.Img
             variant="top"
             className="project-img"
             src={projects.image}
           />
-          <Card.Body className={"card-background"}>
+          <Card.Body className={"card-background d-flex flex-column"}>
             <Card.Title>{projects.name}</Card.Title>
-            <Card.Text>
-          {projects.bio}
-        </Card.Text>
-            <Row>
+            <Card.Text>{projects.bio}</Card.Text>
+            <Row  className="mt-auto">
               <Button type="submit" variant="light">
                 <a
                   className="deploy-btn"
@@ -118,10 +111,7 @@ export default function Project() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <img
-                    src={gitHubIcon}
-                    alt="github icon"
-                  />
+                  <img src={gitHubIcon} alt="github icon" />
                 </a>
               </Button>
             </Row>
