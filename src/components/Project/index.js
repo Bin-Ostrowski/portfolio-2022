@@ -5,18 +5,29 @@ import rhythmInRegion from "../../assets/img/rhythm-in-region.jpeg";
 import gitHubIcon from "../../assets/img/GitHub-Dark.png";
 import photoPort from "../../assets/img/photoPort.jpg";
 import pizzaHunt from "../../assets/img/pizzaHunt.jpg";
-import techBlog from "../../assets/img/techBlog.jpg";
+import googleBooks from "../../assets/img/google-books.PNG";
 import noteTaker from "../../assets/img/noteTaker.jpg";
+import deepThoughts from "../../assets/img/deep-thoughts.PNG";
 
 export default function Project() {
   const projects = [
+    {
+      name: "Google Books",
+      deploy: "https://immense-citadel-75341.herokuapp.com/",
+      tools:
+        "MERN Apollo GraphQL",
+      github: "https://github.com/Bin-Ostrowski/google-books",
+      bio: "Refactored code to set up an Apollo Server to use GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.",
+      image: googleBooks,
+      alt: "screenshot of google books project",
+    },
     {
       name: "Dose",
       deploy: "https://cryptic-inlet-45736.herokuapp.com/",
       tools:
         "BCRYPT SEQUELIZE DOTENV EXPRESS HANDLEBARS SESSION JEST MYSQL2 CRON-JOB TWILIO REGEX JS CSS BOOTSTRAP",
       github: "https://github.com/kfisch2/dose",
-      bio: "Dose is a full-stack application where a user can keep track of all their perscriptions in one place and receive reminders via text message for refils.",
+      bio: "A full-stack application to track perscriptions and receive reminders via text message for refils.",
       image: dose,
       alt: "screenshot of dose project",
     },
@@ -48,13 +59,13 @@ export default function Project() {
       alt: "screenshot of pizza hunt project",
     },
     {
-      name: "Tech Blog",
-      deploy: "https://murmuring-headland-96223.herokuapp.com/",
+      name: "Deep Thoughts",
+      deploy: "https://still-brushlands-78409.herokuapp.com/",
       tools: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      github: "https://github.com/Bin-Ostrowski/tech-blog",
-      bio: "A general blog for tech junkies.",
-      image: techBlog,
-      alt: "screenshot of tech blog project",
+      github: "https://github.com/Bin-Ostrowski/deep-thoughts",
+      bio: "A blog for users to login, store thoughts, reactions, and friends. Deep Thoughts is a full-stack MERN app with an Apollo server using GraphQL.",
+      image: deepThoughts,
+      alt: "screenshot of deep thoughts project",
     },
     {
       name: "Note Taker",
@@ -85,6 +96,9 @@ export default function Project() {
           />
           <Card.Body className={"card-background"}>
             <Card.Title>{projects.name}</Card.Title>
+            <Card.Text>
+          {projects.bio}
+        </Card.Text>
             <Row>
               <Button type="submit" variant="light">
                 <a

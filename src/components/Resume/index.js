@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import resumePdf from "../../assets/resume/resume-2022.jpg";
 
 export default function Resume() {
   return (
@@ -20,13 +19,8 @@ export default function Resume() {
               target="_blank"
               rel="noreferrer noopener"
             >
-              Click here to download Resume
+              Click Here to Download Resume
             </a>
-          </Col>
-          <Col className="md">
-            {/* //have image be a modal that pops up in larger view */}
-            <img src={resumePdf} style={{ width: "30rem" }} alt="resume" 
-            />
           </Col>
         </Row>
       </Container>
