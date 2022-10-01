@@ -21,6 +21,15 @@ export default function Project() {
       alt: "screenshot of google books project",
     },
     {
+      name: "Deep Thoughts",
+      deploy: "https://still-brushlands-78409.herokuapp.com/",
+      tools: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      github: "https://github.com/Bin-Ostrowski/deep-thoughts",
+      bio: "A blog for users to login, store thoughts, reactions, and friends. Deep Thoughts is a full-stack MERN app with an Apollo server using GraphQL.",
+      image: deepThoughts,
+      alt: "screenshot of deep thoughts project",
+    },
+    {
       name: "Dose",
       deploy: "https://cryptic-inlet-45736.herokuapp.com/",
       tools:
@@ -29,15 +38,6 @@ export default function Project() {
       bio: "A full-stack application to track perscriptions and receive reminders via text message for refils.",
       image: dose,
       alt: "screenshot of dose project",
-    },
-    {
-      name: "Rhythm in Region",
-      deploy: "https://bin-ostrowski.github.io/rhythm-in-region/",
-      tools: "APIs JS MATERIALIZE CSS HTML",
-      github: "https://github.com/Bin-Ostrowski/rhythm-in-region",
-      bio: "Discover local concerts and artists in prefered genre.",
-      image: rhythmInRegion,
-      alt: "screenshot of rhythm in region project",
     },
     {
       name: "Photo Port",
@@ -58,15 +58,6 @@ export default function Project() {
       alt: "screenshot of pizza hunt project",
     },
     {
-      name: "Deep Thoughts",
-      deploy: "https://still-brushlands-78409.herokuapp.com/",
-      tools: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-      github: "https://github.com/Bin-Ostrowski/deep-thoughts",
-      bio: "A blog for users to login, store thoughts, reactions, and friends. Deep Thoughts is a full-stack MERN app with an Apollo server using GraphQL.",
-      image: deepThoughts,
-      alt: "screenshot of deep thoughts project",
-    },
-    {
       name: "Note Taker",
       deploy: "https://infinite-sands-67369.herokuapp.com/",
       tools: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -74,6 +65,15 @@ export default function Project() {
       bio: "An app to write and store notes.",
       image: noteTaker,
       alt: "screenshot of note taker project",
+    },
+    {
+      name: "Rhythm in Region",
+      deploy: "https://bin-ostrowski.github.io/rhythm-in-region/",
+      tools: "APIs JS MATERIALIZE CSS HTML",
+      github: "https://github.com/Bin-Ostrowski/rhythm-in-region",
+      bio: "Discover local concerts and artists in prefered genre.",
+      image: rhythmInRegion,
+      alt: "screenshot of rhythm in region project",
     },
   ];
 
