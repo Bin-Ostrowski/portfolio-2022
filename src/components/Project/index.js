@@ -8,9 +8,19 @@ import pizzaHunt from "../../assets/img/pizzaHunt.jpg";
 import googleBooks from "../../assets/img/google-books.PNG";
 import noteTaker from "../../assets/img/noteTaker.jpg";
 import deepThoughts from "../../assets/img/deep-thoughts.PNG";
+import choreItUp from "../../assets/img/chore-it-up.PNG";
 
 export default function Project() {
   const projects = [
+    {
+      name: "Chore It Up",
+      deploy: "https://floating-atoll-58183.herokuapp.com/",
+      tools: "MERN Apollo GraphQL",
+      github: "https://github.com/Bin-Ostrowski/chore-it-up",
+      bio: "Single-page MERN app allowing users within the same group to keep track of chores",
+      image: choreItUp,
+      alt: "screenshot of chore it up project",
+    },
     {
       name: "Google Books",
       deploy: "https://immense-citadel-75341.herokuapp.com/",
