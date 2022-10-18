@@ -117,6 +117,7 @@ export default function ContactForm() {
                 </Button>
               </div>
             </Form>
+            <p className="email">Or email to: <a className="href-links" href="mailto:bin.ostrowski@gmail.com">bin.ostrowski@gmail.com</a></p>
           </Col>
         </Row>
       </Container>
