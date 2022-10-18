@@ -152,3 +152,12 @@ footer {
 .skills:hover {
   color: var(--tertiary);
 }
+
+.icon {
+  padding: 5px;
+  max-width: 50px;
+}
+
+.icon:hover {
+  color: var(--light);
+}

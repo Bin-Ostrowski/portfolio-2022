@@ -27,8 +27,8 @@ const skills = [
   "Regex",
 ];
 
+// sort skills alphabeticaly
 const sortedSkills = skills.sort();
-console.log(sortedSkills)
 
 export default function Resume() {
   return (

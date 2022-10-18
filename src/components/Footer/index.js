@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import linkedIn from "../../assets/img/linkedIn.png";
 import gitHub from "../../assets/img/GitHub-Dark.png";
 import stackOverflow from "../../assets/img/stackoverflow.png";
+import email from "../../assets/img/email.png";
 
 export default function Nav() {
   const icons = [
@@ -21,6 +22,11 @@ export default function Nav() {
       img: stackOverflow,
       alt: "stack overflow Icon",
     },
+    {
+      href: "mailto:bin.ostrowski@gmail.com",
+      img: email,
+      alt: "email Icon",
+    }
   ];
 
   //declare icon state
@@ -45,7 +51,7 @@ export default function Nav() {
                 rel="noreferrer noopener"
                 className="flex-wrap"
               >
-                <img src={icons.img} style={{ width: "30" }} alt={icons.alt} />
+                <img className="icon" src={icons.img} alt={icons.alt} />
               </a>
             ))}
           </Col>
