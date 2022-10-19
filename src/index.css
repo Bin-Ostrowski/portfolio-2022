@@ -1,16 +1,12 @@
-
-
 * {
   box-sizing: border-box;
 }
 
 :root {
   --primary: rgb(44, 44, 44);
-  --secondary: rgb(154, 96, 96);
+  --secondary:rgb(176, 115, 123) ;
   --tertiary: #FFA13C;
   --light: rgb(255, 189, 145);
-  --black: rgb(14, 14, 14);
-
 }
 
 html,
@@ -34,6 +30,15 @@ header {
   z-index: 9999; 
 }
 
+.navActive {
+  color: var(--tertiary);
+  text-decoration: none;
+}
+
+.navActive {
+  cursor: pointer;
+}
+
 .hero {
   background-image: url("./assets/img/flowers.jpg");/*fill with image */
   background-size: cover;
@@ -45,6 +50,8 @@ header {
   background-position: 80%;
   padding: 280px 20px 20px 20px;
 }
+
+/* START MAIN */
 
 .section-title {
 background-color: rgb(44, 44, 44, 0.6);
@@ -73,11 +80,6 @@ section {
   padding: 0 0px 100px 0;
 }
 
-footer {
-  background: var( --tertiary);
-  color: var(--primary)
-}
-
 .href-links {
   color: var(--light);
   text-decoration: none;
@@ -89,46 +91,83 @@ footer {
   cursor: pointer;
 }
 
+/* START PROJECT */
+.filter-btn {
+  margin: 10px;
+ }
+
+.project-container {
+  margin: 20px 20px 20px 0;
+}
+
+.project-img {
+  max-height:15em;
+  object-position: top;
+  top: 0;
+  margin: 5px 0 20px 0;
+}
+
+.project-title {
+  color: var(--tertiary);
+}
+
+.technologies {
+  color: var(--secondary);
+}
+
+.deploy-btn {
+  padding-right: 10px;
+} 
+
+/* END PROJECT */
+
+/* START CONTACT*/
+
+.contact-text {
+  padding: 20px 0 0 25px;
+}
+
 .form {
   padding: 0 50px 0 20px;
 }
 
-.project-cards {
-  margin: 20px;
-  background-color: var(--light);
+/* END CONTACT */
+
+/* START RESUME*/
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.card-background {
-  background-color: var(--primary);
+.skills {
+  flex-direction: row;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-.project-img {
-  max-height: 200px;
-  object-fit: cover;
-  object-position: top;
-  top: 0;
-}
-
-.deploy-btn {
-  color: var(--secondary);
-  text-decoration: none;
-} 
-
-.deploy-btn:hover {
-  color: var(--secondary);
-  text-decoration: none;
-  cursor: pointer;
-} 
-
-.project-github-btn {
-  padding-top: 10px;
-}
-
-.navActive {
+.skills:hover {
   color: var(--tertiary);
-  text-decoration: none;
 }
 
-.navActive {
-  cursor: pointer;
+/* END RESUME */
+/* END MAIN*/
+
+/* START FOOTER */
+svg {
+  padding: 5px;
+ 
+  fill: var(--primary);
 }
+
+svg:hover {
+  fill: var(--secondary);
+}
+
+footer {
+  background: var( --tertiary);
+  color: var(--primary)
+}
+
+/* FOOTER ENDS */
