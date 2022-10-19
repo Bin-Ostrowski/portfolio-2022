@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio-2022/static/css/main.46c08528.css",
-    "main.js": "/portfolio-2022/static/js/main.74a5b647.js",
+    "main.css": "/portfolio-2022/static/css/main.da5a5687.css",
+    "main.js": "/portfolio-2022/static/js/main.670ddbdb.js",
     "static/js/787.d5360f6f.chunk.js": "/portfolio-2022/static/js/787.d5360f6f.chunk.js",
-    "static/media/dose.png": "/portfolio-2022/static/media/dose.1ed3cd669dc477a7ab83.png",
+    "static/media/photoPort.PNG": "/portfolio-2022/static/media/photoPort.ef024c182fb4700653da.PNG",
+    "static/media/dose.png": "/portfolio-2022/static/media/dose.03c7b1d293a4ba2ef8e9.png",
     "static/media/google-books.PNG": "/portfolio-2022/static/media/google-books.165c5a1528b6a5c79c48.PNG",
     "static/media/flowers.jpg": "/portfolio-2022/static/media/flowers.1e91982bf04d44c945e1.jpg",
-    "static/media/photoPort.jpg": "/portfolio-2022/static/media/photoPort.05ce6859480499ba37ed.jpg",
     "static/media/pizzaHunt.jpg": "/portfolio-2022/static/media/pizzaHunt.362759ec00a4edcee02d.jpg",
     "static/media/chore-it-up.PNG": "/portfolio-2022/static/media/chore-it-up.43713fae57ad9cd34cd6.PNG",
-    "static/media/deep-thoughts.PNG": "/portfolio-2022/static/media/deep-thoughts.d5ad94105567efb7252a.PNG",
+    "static/media/deep-thoughts.PNG": "/portfolio-2022/static/media/deep-thoughts.c49ee2288c01e59e0415.PNG",
     "static/media/rhythm-in-region.jpeg": "/portfolio-2022/static/media/rhythm-in-region.29ade211060e10f8f271.jpeg",
     "static/media/noteTaker.jpg": "/portfolio-2022/static/media/noteTaker.fec3b97926b8ba65b79e.jpg",
     "static/media/portrait.jpg": "/portfolio-2022/static/media/portrait.728c9dfaf69dfefb50a5.jpg",
     "index.html": "/portfolio-2022/index.html",
-    "main.46c08528.css.map": "/portfolio-2022/static/css/main.46c08528.css.map",
-    "main.74a5b647.js.map": "/portfolio-2022/static/js/main.74a5b647.js.map",
+    "main.da5a5687.css.map": "/portfolio-2022/static/css/main.da5a5687.css.map",
+    "main.670ddbdb.js.map": "/portfolio-2022/static/js/main.670ddbdb.js.map",
     "787.d5360f6f.chunk.js.map": "/portfolio-2022/static/js/787.d5360f6f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46c08528.css",
-    "static/js/main.74a5b647.js"
+    "static/css/main.da5a5687.css",
+    "static/js/main.670ddbdb.js"
   ]
 }
