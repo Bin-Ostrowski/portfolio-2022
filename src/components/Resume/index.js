@@ -12,7 +12,13 @@ const skills = [
   "jQuery",
   "Apollo",
   "GraphQL",
+  "MERN",
+  "MEAN",
+  "HTML",
   "Mongoose",
+  "NPM",
+  "GitHub",
+  "GitBash",
   "React-Router-Dom",
   "JSON Web Token",
   "DotENV",
@@ -43,26 +49,26 @@ export default function Resume() {
           <Col className="md" style={{ padding: "30px" }}>
             <h3>
               <a
-              className="href-links"
-              href="https://docs.google.com/document/d/1CdX1Qr8EKW16Y7FmVG9AFbVxzf1_l5HV/edit?usp=sharing&ouid=115667110176725207034&rtpof=true&sd=true"
-              download
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Click Here to Download Resume
-            </a>
-              </h3>
+                className="href-links"
+                href="https://docs.google.com/document/d/1CdX1Qr8EKW16Y7FmVG9AFbVxzf1_l5HV/edit?usp=sharing&ouid=115667110176725207034&rtpof=true&sd=true"
+                download
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Click Here to Download Resume
+              </a>
+            </h3>
           </Col>
         </Row>
         <Row>
           <Col style={{ padding: "30px" }}>
             <h3>Skills & Technologies:</h3>
             <ul className="skills-container">
-              
               {sortedSkills.map((skill, i) => (
-                <li className="skills"key={i}>{skill}</li>
+                <li className="skills" key={i}>
+                  {skill}
+                </li>
               ))}
-              
             </ul>
           </Col>
         </Row>

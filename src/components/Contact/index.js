@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
 import { Button, Form, Container, Row, Col } from "react-bootstrap";
-// import "./contact.css";
 
 export default function ContactForm() {
   //declare formState to be empty strings
@@ -38,19 +37,10 @@ export default function ContactForm() {
     }
 
     //conditional statment for error message
-    //update setFormState
-    //make property name dynamic variable determined by form element.
-    //from input value
     if (!errorMessage) {
       setFormState({ ...formState, [e.target.name]: e.target.value });
     }
   }
-
-  // //submit form handler
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   console.log(formState);
-  // }
 
   return (
     <section>
@@ -61,6 +51,31 @@ export default function ContactForm() {
           </Col>
         </Row>
         <Row>
+          <Col className="contact-text">
+            <p>
+              Any questions?
+              <br />
+              <br />
+              Let's connect and see how I can be of service to you!
+              <br />
+              <br />
+              It would be a pleasure to get to know you and answer any questions
+              or concerns.
+            </p>
+            <br />
+            <p>
+              Email:{" "}
+              <a className="href-links" href="mailto:bin.ostrowski@gmail.com">
+                bin.ostrowski@gmail.com
+              </a>
+            </p>
+            <p>
+              Phone:{" "}
+              <a className="href-links" href="tel:+12314090693">
+                (231) 409-0693
+              </a>
+            </p>
+          </Col>
           <Col className="md form">
             <Form
               action="https://formsubmit.co/bin.ostrowski@gmail.com"
@@ -79,7 +94,7 @@ export default function ContactForm() {
                 />
               </Form.Group>
               <Form.Group className="mb-3">
-                <Form.Label htmlFor="email">Email address:</Form.Label>
+                <Form.Label htmlFor="email">Email Address:</Form.Label>
                 <Form.Control
                   type="email"
                   defaultValue={email}
@@ -117,7 +132,6 @@ export default function ContactForm() {
                 </Button>
               </div>
             </Form>
-            <p className="email">Or email to: <a className="href-links" href="mailto:bin.ostrowski@gmail.com">bin.ostrowski@gmail.com</a></p>
           </Col>
         </Row>
       </Container>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-
 export default function Nav() {
   const github = (
     <svg
@@ -87,12 +86,6 @@ export default function Nav() {
       <Container>
         <Row className="justify-content-sm-center">
           <Col xs="auto">
-            <h2>Let's connect!</h2>
-          </Col>
-        </Row>
-
-        <Row className="justify-content-sm-center">
-          <Col xs="auto">
             {currentIcon.map((icons, i) => (
               <a
                 href={icons.href}
@@ -108,7 +101,7 @@ export default function Nav() {
         </Row>
         <Row className="justify-content-sm-center">
           <Col xs="auto">
-            <div>&copy;2022 by Robin Ostrowski</div>
+            <div>Robin Ostrowski, 2022</div>
           </Col>
         </Row>
       </Container>

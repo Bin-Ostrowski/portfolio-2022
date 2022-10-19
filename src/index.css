@@ -1,16 +1,12 @@
-
-
 * {
   box-sizing: border-box;
 }
 
 :root {
   --primary: rgb(44, 44, 44);
-  --secondary: rgb(128, 96, 67);
+  --secondary:rgb(176, 115, 123) ;
   --tertiary: #FFA13C;
   --light: rgb(255, 189, 145);
-  --black: rgb(14, 14, 14);
-
 }
 
 html,
@@ -34,6 +30,15 @@ header {
   z-index: 9999; 
 }
 
+.navActive {
+  color: var(--tertiary);
+  text-decoration: none;
+}
+
+.navActive {
+  cursor: pointer;
+}
+
 .hero {
   background-image: url("./assets/img/flowers.jpg");/*fill with image */
   background-size: cover;
@@ -45,6 +50,8 @@ header {
   background-position: 80%;
   padding: 280px 20px 20px 20px;
 }
+
+/* START MAIN */
 
 .section-title {
 background-color: rgb(44, 44, 44, 0.6);
@@ -73,11 +80,6 @@ section {
   padding: 0 0px 100px 0;
 }
 
-footer {
-  background: var( --tertiary);
-  color: var(--primary)
-}
-
 .href-links {
   color: var(--light);
   text-decoration: none;
@@ -89,18 +91,14 @@ footer {
   cursor: pointer;
 }
 
-.form {
-  padding: 0 50px 0 20px;
-}
+/* START PROJECT */
+.filter-btn {
+  margin: 10px;
+ }
 
 .project-container {
   margin: 20px 20px 20px 0;
-  /* background-color: var(--light); */
 }
-
-/* .card-background {
-  background-color: var(--primary);
-} */
 
 .project-img {
   max-height:15em;
@@ -116,26 +114,26 @@ footer {
 .technologies {
   color: var(--secondary);
 }
-.project-description{
-  /* margin-top: 11px; */
-}
 
 .deploy-btn {
   padding-right: 10px;
 } 
 
-.navActive {
-  color: var(--tertiary);
-  text-decoration: none;
+/* END PROJECT */
+
+/* START CONTACT*/
+
+.contact-text {
+  padding: 20px 0 0 25px;
 }
 
-.navActive {
-  cursor: pointer;
+.form {
+  padding: 0 50px 0 20px;
 }
 
-.email {
-  padding: 20px 0 0 20px;
-}
+/* END CONTACT */
+
+/* START RESUME*/
 
 .skills-container {
   display: flex;
@@ -153,6 +151,10 @@ footer {
   color: var(--tertiary);
 }
 
+/* END RESUME */
+/* END MAIN*/
+
+/* START FOOTER */
 svg {
   padding: 5px;
  
@@ -163,6 +165,9 @@ svg:hover {
   fill: var(--secondary);
 }
 
-.filter-btn {
- margin: 10px;
+footer {
+  background: var( --tertiary);
+  color: var(--primary)
 }
+
+/* FOOTER ENDS */

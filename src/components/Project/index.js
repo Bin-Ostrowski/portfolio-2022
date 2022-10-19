@@ -15,9 +15,8 @@ export default function Project() {
       name: "Chore It Up",
       deploy: "https://floating-atoll-58183.herokuapp.com/",
       tools: [
-      
         "MERN",
-       
+
         "React",
         "Full Stack",
         "Apollo",
@@ -34,7 +33,7 @@ export default function Project() {
     {
       name: "Google Books",
       deploy: "https://immense-citadel-75341.herokuapp.com/",
-      tools: [  "MERN", "Full Stack", "Apollo", "GraphQL"],
+      tools: ["MERN", "Full Stack", "Apollo", "GraphQL", "JavaScript", "CSS"],
       github: "https://github.com/Bin-Ostrowski/google-books",
       bio: "Refactored code to set up an Apollo Server to use GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.",
       image: googleBooks,
@@ -43,15 +42,7 @@ export default function Project() {
     {
       name: "Deep Thoughts",
       deploy: "https://still-brushlands-78409.herokuapp.com/",
-      tools: [
-      
-        "MERN",
-        "Full Stack",
-        "Apollo",
-        "GraphQL",
-        "JavaScript",
-        "CSS",
-      ],
+      tools: ["MERN", "Full Stack", "Apollo", "GraphQL", "JavaScript", "CSS"],
       github: "https://github.com/Bin-Ostrowski/deep-thoughts",
       bio: "A blog for users to login, store thoughts, reactions, and friends. Deep Thoughts is a full-stack MERN app with an Apollo server using GraphQL.",
       image: deepThoughts,
@@ -61,23 +52,21 @@ export default function Project() {
       name: "Dose",
       deploy: "https://cryptic-inlet-45736.herokuapp.com/",
       tools: [
-      
         "BCRYPT",
-        "FULL-STACK",
-        "SEQUELIZE",
-        "DOTENV",
-        "EXPRESS",
-        "HANDLEBARS",
-        "SESSION",
-        "JEST",
-        "MYSQL2",
+        "Full Stack",
+        "Sequelize",
+        "DotENV",
+        "Express",
+        "Handlebars",
+        "Session",
+        "Jest",
+        "MySQL2",
         "CRON-JOB",
-        "TWILIO",
-        "REGEX",
-        "JS",
+        "Twilio",
+        "Regex",
+        "JavaScript",
         "CSS",
-        "BOOTSTRAP"
-       
+        "Bootstrap",
       ],
       github: "https://github.com/kfisch2/dose",
       bio: "A full-stack application to track perscriptions and receive reminders via text message for refils.",
@@ -87,7 +76,7 @@ export default function Project() {
     {
       name: "Photo Port",
       deploy: "https://bin-ostrowski.github.io/photo-port/",
-      tools: [ "Front End", "JavaScript", "CSS", "React"],
+      tools: ["Front End", "JavaScript", "CSS", "React"],
       github: "https://github.com/Bin-Ostrowski/photo-port/settings/pages",
       bio: "Lyza's Photography Portfolio",
       image: photoPort,
@@ -96,7 +85,7 @@ export default function Project() {
     {
       name: "Pizza Hunt",
       deploy: "https://salty-citadel-62296.herokuapp.com/",
-      tools: [  "MEAN", "Full Stack", "Restful-API"],
+      tools: ["MEAN", "Full Stack", "Restful-API", "JavaScript", "CSS"],
       github: "https://github.com/Bin-Ostrowski/pizza-hunt",
       bio: "A blog forum for pizza lovers.",
       image: pizzaHunt,
@@ -123,7 +112,7 @@ export default function Project() {
   ];
 
   // array of filter options
-  const filterBtn = [ "Full Stack", "Front End", "MERN", "MEAN"];
+  const filterBtn = ["Full Stack", "Front End", "MERN", "MEAN"];
 
   // declare project state
   const [currentProject, setProject] = useState(projects);
@@ -209,7 +198,6 @@ export default function Project() {
                     Deploy Project
                   </Button>
                 </a>
-
                 <a
                   href={projects.github}
                   target="_blank"
