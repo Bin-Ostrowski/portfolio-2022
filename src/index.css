@@ -6,7 +6,7 @@
 
 :root {
   --primary: rgb(44, 44, 44);
-  --secondary: rgb(107, 82, 65);
+  --secondary: rgb(128, 96, 67);
   --tertiary: #FFA13C;
   --light: rgb(255, 189, 145);
   --black: rgb(14, 14, 14);
@@ -93,8 +93,8 @@ footer {
   padding: 0 50px 0 20px;
 }
 
-.project-cards {
-  margin: 20px;
+.project-container {
+  margin: 20px 20px 20px 0;
   /* background-color: var(--light); */
 }
 
@@ -103,26 +103,26 @@ footer {
 } */
 
 .project-img {
-  max-height: 200px;
-  object-fit: cover;
+  max-height:15em;
   object-position: top;
   top: 0;
+  margin: 5px 0 20px 0;
+}
+
+.project-title {
+  color: var(--tertiary);
+}
+
+.technologies {
+  color: var(--secondary);
+}
+.project-description{
+  /* margin-top: 11px; */
 }
 
 .deploy-btn {
-  color: var(--secondary);
-  text-decoration: none;
+  padding-right: 10px;
 } 
-
-.deploy-btn:hover {
-  color: var(--secondary);
-  text-decoration: none;
-  cursor: pointer;
-} 
-
-.project-github-btn {
-  padding-top: 10px;
-}
 
 .navActive {
   color: var(--tertiary);
