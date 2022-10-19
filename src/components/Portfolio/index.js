@@ -3,6 +3,11 @@ import Project from "../Project";
 import { Container, Row, Col } from "react-bootstrap";
 
 export default function Portfolio({ currentProject }) {
+console.log(currentProject)
+  // const filterFrontEnd = (event) => {
+
+  // }
+
   return (
     <section>
       <Container>

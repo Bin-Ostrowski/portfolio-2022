@@ -157,7 +157,3 @@ footer {
   padding: 5px;
   max-width: 50px;
 }
-
-.icon:hover {
-  color: var(--light);
-}
