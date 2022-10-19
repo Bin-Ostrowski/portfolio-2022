@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Button} from "react-bootstrap";
 import dose from "../../assets/img/dose.png";
 import rhythmInRegion from "../../assets/img/rhythm-in-region.jpeg";
-import gitHubIcon from "../../assets/img/GitHub-Dark.png";
 import photoPort from "../../assets/img/photoPort.jpg";
 import pizzaHunt from "../../assets/img/pizzaHunt.jpg";
 import googleBooks from "../../assets/img/google-books.PNG";
@@ -11,6 +10,18 @@ import deepThoughts from "../../assets/img/deep-thoughts.PNG";
 import choreItUp from "../../assets/img/chore-it-up.PNG";
 
 export default function Project() {
+  const gitHubIcon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      fill="black"
+      class="bi bi-github"
+      viewBox="0 0 16 16"
+    >
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+    </svg>
+  );
   const projects = [
     {
       name: "Chore It Up",
@@ -101,24 +112,24 @@ export default function Project() {
       image: pizzaHunt,
       alt: "screenshot of pizza hunt project",
     },
-    // {
-    //   name: "Note Taker",
-    //   deploy: "https://infinite-sands-67369.herokuapp.com/",
-    //   tools: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    //   github: "https://github.com/Bin-Ostrowski/note-taker",
-    //   bio: "An app to write and store notes.",
-    //   image: noteTaker,
-    //   alt: "screenshot of note taker project",
-    // },
-    // {
-    //   name: "Rhythm in Region",
-    //   deploy: "https://bin-ostrowski.github.io/rhythm-in-region/",
-    //   tools: "APIs JS MATERIALIZE CSS HTML",
-    //   github: "https://github.com/Bin-Ostrowski/rhythm-in-region",
-    //   bio: "Discover local concerts and artists in prefered genre.",
-    //   image: rhythmInRegion,
-    //   alt: "screenshot of rhythm in region project",
-    // },
+  //   // {
+  //   //   name: "Note Taker",
+  //   //   deploy: "https://infinite-sands-67369.herokuapp.com/",
+  //   //   tools: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  //   //   github: "https://github.com/Bin-Ostrowski/note-taker",
+  //   //   bio: "An app to write and store notes.",
+  //   //   image: noteTaker,
+  //   //   alt: "screenshot of note taker project",
+  //   // },
+  //   // {
+  //   //   name: "Rhythm in Region",
+  //   //   deploy: "https://bin-ostrowski.github.io/rhythm-in-region/",
+  //   //   tools: "APIs JS MATERIALIZE CSS HTML",
+  //   //   github: "https://github.com/Bin-Ostrowski/rhythm-in-region",
+  //   //   bio: "Discover local concerts and artists in prefered genre.",
+  //   //   image: rhythmInRegion,
+  //   //   alt: "screenshot of rhythm in region project",
+  //   // },
   ];
 
   // array of filter options
@@ -126,15 +137,12 @@ export default function Project() {
 
   // declare project state
   const [currentProject, setProject] = useState(projects);
-  console.log("currentProject", currentProject);
 
   // set constant state
   const [allProjects, setFilterState] = useState(projects);
-  console.log("allProjects", allProjects);
 
-  // filter though projects based on clicked filter
   const filterHandler = (filterBtn) => {
-    //function to filter though nested tools array within each project object
+    // filter though nested tools array within each project object
     function filterArray(array, filters) {
       const filterKeys = Object.keys(filters);
       return array.filter((item) => {
@@ -147,7 +155,7 @@ export default function Project() {
       });
     }
 
-    // define tools array to filter for filterArray function
+    // define tools array to filter
     const filters = {
       tools: (tools) => {
         if (tools.includes(filterBtn)) return true; // case sensitive
@@ -157,39 +165,34 @@ export default function Project() {
     // filtered results
     const result = filterArray(allProjects, filters);
 
-    console.log("result", result);
-
-    // setProject with searched results
+    // set currentProject with filtered results
     setProject(result);
   };
 
   return (
-    <Container className="flex-row">
-      <Row>
-        <Col>
+    <Container>
+      <Row className="justify-content-md-center">
+        <Col md="auto">
           {filterBtn.map((filterBtn, i) => (
             <Button
               key={filterBtn}
               id="full-stack"
               variant="light"
               onClick={() => filterHandler(filterBtn)}
+              className="filter-btn"
             >
               {filterBtn}
             </Button>
           ))}
         </Col>
       </Row>
-      <Row>
+      <Row className="cards-row">
         {currentProject.map((projects, i) => (
-          <Card className="project-cards " style={{ width: "23rem" }} key={i}>
-            <Card.Img
-              variant="top"
-              className="project-img"
-              src={projects.image}
-            />
-            <Card.Body className={"card-background d-flex flex-column"}>
-              <Card.Title>{projects.name}</Card.Title>
-              <Card.Text>{projects.bio}</Card.Text>
+          <div className="project-cards " style={{ width: "23rem" }} key={i}>
+            <img variant="top" className="project-img" src={projects.image} />
+            <div className={"card-background d-flex flex-column"}>
+              <h2>{projects.name}</h2>
+              <p>{projects.bio}</p>
               <Row className="mt-auto">
                 <Button type="submit" variant="light">
                   <a
@@ -209,12 +212,12 @@ export default function Project() {
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <img src={gitHubIcon} alt="github icon" />
+                   {gitHubIcon}
                   </a>
                 </Button>
               </Row>
-            </Card.Body>
-          </Card>
+            </div>
+          </div>
         ))}
       </Row>
     </Container>

@@ -6,7 +6,7 @@
 
 :root {
   --primary: rgb(44, 44, 44);
-  --secondary: rgb(154, 96, 96);
+  --secondary: rgb(107, 82, 65);
   --tertiary: #FFA13C;
   --light: rgb(255, 189, 145);
   --black: rgb(14, 14, 14);
@@ -95,12 +95,12 @@ footer {
 
 .project-cards {
   margin: 20px;
-  background-color: var(--light);
+  /* background-color: var(--light); */
 }
 
-.card-background {
+/* .card-background {
   background-color: var(--primary);
-}
+} */
 
 .project-img {
   max-height: 200px;
@@ -153,7 +153,16 @@ footer {
   color: var(--tertiary);
 }
 
-.icon {
+svg {
   padding: 5px;
-  max-width: 50px;
+ 
+  fill: var(--primary);
+}
+
+svg:hover {
+  fill: var(--secondary);
+}
+
+.filter-btn {
+ margin: 10px;
 }
