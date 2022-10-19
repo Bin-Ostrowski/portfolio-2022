@@ -17,6 +17,7 @@ export default function Project() {
       deploy: "https://floating-atoll-58183.herokuapp.com/",
       tools: [
         "MERN",
+        "All",
         "React",
         "Full Stack",
         "Apollo",
@@ -33,7 +34,7 @@ export default function Project() {
     {
       name: "Google Books",
       deploy: "https://immense-citadel-75341.herokuapp.com/",
-      tools: ["MERN", "Full Stack", "Apollo", "GraphQL"],
+      tools: ["MERN", "Full Stack", "Apollo", "GraphQL", "All"],
       github: "https://github.com/Bin-Ostrowski/google-books",
       bio: "Refactored code to set up an Apollo Server to use GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.",
       image: googleBooks,
@@ -42,7 +43,15 @@ export default function Project() {
     {
       name: "Deep Thoughts",
       deploy: "https://still-brushlands-78409.herokuapp.com/",
-      tools: ["MERN", "Full Stack", "Apollo", "GraphQL", "JavaScript", "CSS"],
+      tools: [
+        "MERN",
+        "Full Stack",
+        "Apollo",
+        "GraphQL",
+        "JavaScript",
+        "CSS",
+        "All",
+      ],
       github: "https://github.com/Bin-Ostrowski/deep-thoughts",
       bio: "A blog for users to login, store thoughts, reactions, and friends. Deep Thoughts is a full-stack MERN app with an Apollo server using GraphQL.",
       image: deepThoughts,
@@ -67,6 +76,7 @@ export default function Project() {
         "JS",
         "CSS",
         "BOOTSTRAP",
+        "All",
       ],
       github: "https://github.com/kfisch2/dose",
       bio: "A full-stack application to track perscriptions and receive reminders via text message for refils.",
@@ -76,7 +86,7 @@ export default function Project() {
     {
       name: "Photo Port",
       deploy: "https://bin-ostrowski.github.io/photo-port/",
-      tools: ["Frontend", "JavaScript", "CSS", "React"],
+      tools: ["Front End", "JavaScript", "CSS", "React", "All"],
       github: "https://github.com/Bin-Ostrowski/photo-port/settings/pages",
       bio: "Lyza's Photography Portfolio",
       image: photoPort,
@@ -85,7 +95,7 @@ export default function Project() {
     {
       name: "Pizza Hunt",
       deploy: "https://salty-citadel-62296.herokuapp.com/",
-      tools: ["MEAN", "Full Stack", "Restful-API"],
+      tools: ["MEAN", "Full Stack", "Restful-API", "All"],
       github: "https://github.com/Bin-Ostrowski/pizza-hunt",
       bio: "A blog forum for pizza lovers.",
       image: pizzaHunt,
@@ -114,116 +124,52 @@ export default function Project() {
   // array of filter options
   const filterBtn = ["All", "Full Stack", "Front End", "MERN", "MEAN"];
 
-  // declare current filter state
-  const [currentFilter, setFilter] = useState(filterBtn[0]);
-  console.log("currentfilter", currentFilter);
-
-
   // declare project state
   const [currentProject, setProject] = useState(projects);
-  console.log('currentProject', currentProject)
+  console.log("currentProject", currentProject);
 
-  // const [project] = currentProject
+  // set constant state
+  const [allProjects, setFilterState] = useState(projects);
+  console.log("allProjects", allProjects);
 
-  // console.log(project)
-
+  // filter though projects based on clicked filter
   const filterHandler = (filterBtn) => {
-    console.log("clicked", filterBtn);
-    setFilter(filterBtn);
-
-    console.log("current tools", currentProject[0].tools[0])
-
+    //function to filter though nested tools array within each project object
     function filterArray(array, filters) {
       const filterKeys = Object.keys(filters);
-      return array.filter(item => {
+      return array.filter((item) => {
         // validates all filter criteria
-        return filterKeys.every(key => {
+        return filterKeys.every((key) => {
           // ignores non-function predicates
-          if (typeof filters[key] !== 'function') return true;
+          if (typeof filters[key] !== "function") return true;
           return filters[key](item[key]);
         });
       });
     }
 
+    // define tools array to filter for filterArray function
     const filters = {
       tools: (tools) => {
         if (tools.includes(filterBtn)) return true; // case sensitive
-      }
+      },
     };
-    
-    const result = filterArray(currentProject, filters);
 
+    // filtered results
+    const result = filterArray(allProjects, filters);
 
-    console.log('result', result)
+    console.log("result", result);
+
+    // setProject with searched results
     setProject(result);
   };
 
-  if (currentFilter === 'All') {
-
-    return (
-      <Container className="flex-row">
+  return (
+    <Container className="flex-row">
       <Row>
         <Col>
           {filterBtn.map((filterBtn, i) => (
             <Button
-              id="full-stack"
-              variant="light"
-              key={i}
-              onClick={() => filterHandler(filterBtn)}
-            >
-              {filterBtn}
-            </Button>
-          ))}
-        </Col>
-      </Row>
-      <Row>
-        {currentProject.map((projects, i) => (
-          <Card className="project-cards " style={{ width: "23rem" }} key={projects.name}>
-            <Card.Img
-              variant="top"
-              className="project-img"
-              src={projects.image}
-            />
-            <Card.Body className={"card-background d-flex flex-column"}>
-              <Card.Title>{projects.name}</Card.Title>
-              <Card.Text>{projects.bio}</Card.Text>
-              <Row className="mt-auto">
-                <Button type="submit" variant="light">
-                  <a
-                    className="deploy-btn"
-                    href={projects.deploy}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    >
-                    Deploy Project
-                  </a>
-                </Button>
-              </Row>
-              <Row className="project-github-btn">
-                <Button type="submit" variant="light">
-                  <a
-                    href={projects.github}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    <img src={gitHubIcon} alt="github icon" />
-                  </a>
-                </Button>
-              </Row>
-            </Card.Body>
-          </Card>
-        ))}
-      </Row>
-    </Container>
-  );
-}
-  else {
-    return (
-      <Container className="flex-row">
-      <Row>
-        <Col>
-          {filterBtn.map((filterBtn, i) => (
-            <Button key={filterBtn}
+              key={filterBtn}
               id="full-stack"
               variant="light"
               onClick={() => filterHandler(filterBtn)}
@@ -234,7 +180,6 @@ export default function Project() {
         </Col>
       </Row>
       <Row>
-   
         {currentProject.map((projects, i) => (
           <Card className="project-cards " style={{ width: "23rem" }} key={i}>
             <Card.Img
@@ -273,6 +218,5 @@ export default function Project() {
         ))}
       </Row>
     </Container>
-    )
-  }
+  );
 }
