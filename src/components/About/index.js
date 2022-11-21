@@ -2,6 +2,41 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import portrait from "../../assets/img/portrait.jpg";
 
+const skills = [
+  "React",
+  "JavaScript",
+  "CSS",
+  "MongoDB",
+  "Node.js",
+  "Express.js",
+  "MySQL",
+  "jQuery",
+  "Apollo",
+  "GraphQL",
+  "MERN",
+  "MEAN",
+  "HTML",
+  "Mongoose",
+  "NPM",
+  "GitHub",
+  "GitBash",
+  "React-Router-Dom",
+  "JSON Web Token",
+  "DotENV",
+  "Chakra-UI",
+  "BCRYPT",
+  "Sequelize",
+  "Handlebars",
+  "Session",
+  "Testing",
+  "Jest",
+  "Bootstrap",
+  "Regex",
+];
+
+// sort skills alphabeticaly
+const sortedSkills = skills.sort();
+
 export default function About() {
   return (
     <section>
@@ -22,6 +57,19 @@ export default function About() {
               pursuit of building maintainable web applications everyone enjoys
               using.{" "}
             </p>
+            
+        <Row>
+          <Col style={{ padding: "30px" }}>
+            <h3>Skills & Technologies:</h3>
+            <ul className="skills-container">
+              {sortedSkills.map((skill, i) => (
+                <li className="skills" key={i}>
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </Col>
+        </Row>
           </Col>
           <Col>
             <img src={portrait} style={{ width: "50" }} alt="portrait" />

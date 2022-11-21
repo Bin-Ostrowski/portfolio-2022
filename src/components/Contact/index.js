@@ -63,6 +63,19 @@ export default function ContactForm() {
               or concerns.
             </p>
             <br />
+
+            <h3>
+              <a
+                className="href-links"
+                href="https://docs.google.com/document/d/1CdX1Qr8EKW16Y7FmVG9AFbVxzf1_l5HV/edit?usp=sharing&ouid=115667110176725207034&rtpof=true&sd=true"
+                download
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Also, have a look at my resume.
+              </a>
+            </h3>
+
             <p>
               Email:{" "}
               <a className="href-links" href="mailto:bin.ostrowski@gmail.com">
