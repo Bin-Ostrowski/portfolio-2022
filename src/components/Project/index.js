@@ -13,7 +13,7 @@ export default function Project() {
   const projects = [
     {
       name: "Chore It Up",
-      deploy: "https://floating-atoll-58183.herokuapp.com/",
+      deploy: "https://enigmatic-ravine-68527.herokuapp.com/",
       tools: [
         "MERN",
 
