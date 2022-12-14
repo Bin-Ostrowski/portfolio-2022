@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import dose from "../../assets/img/dose.png";
-import rhythmInRegion from "../../assets/img/rhythm-in-region.jpeg";
 import photoPort from "../../assets/img/photoPort.PNG";
 import pizzaHunt from "../../assets/img/pizzaHunt.jpg";
 import googleBooks from "../../assets/img/google-books.PNG";
-import noteTaker from "../../assets/img/noteTaker.jpg";
 import deepThoughts from "../../assets/img/deep-thoughts.PNG";
 import choreItUp from "../../assets/img/chore-it-up.PNG";
+// import rhythmInRegion from "../../assets/img/rhythm-in-region.jpeg";
+// import noteTaker from "../../assets/img/noteTaker.jpg";
 
 export default function Project() {
   const projects = [
     {
       name: "Chore It Up",
-      deploy: "https://floating-atoll-58183.herokuapp.com/",
+      deploy: "https://enigmatic-ravine-68527.herokuapp.com/",
       tools: [
         "MERN",
 
@@ -120,6 +120,7 @@ export default function Project() {
   // set constant state
   const [allProjects, setFilterState] = useState(projects);
 
+  // filter projects based on which filter btn was clicked
   const filterHandler = (filterBtn) => {
     // filter though nested tools array within each project object
     function filterArray(array, filters) {
